@@ -1,0 +1,64 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms">
+<head>
+	<title>Modificar datos</title>
+	<link type="text/css" rel="stylesheet" href="/static/css/authStyle.css"/>
+	<xf:model xmlns:xf="http://www.w3.org/2002/xforms">
+		<xf:instance>
+			<account xmlns="">
+				<user required="true"/>
+				<name required="true"/>
+				<email required="true"/>
+				<password required="true" />
+				<enable></enable>
+				<role></role>
+				<creation-date></creation-date>
+			</account>
+		</xf:instance>
+		<xf:submission id="Delete" name="delete" method="Delete" validate="true" replace="instance" action="/profile"/>
+		<xf:bind nodeset="/account/user" readonly="true()"/>
+		
+		<xf:submission id="cargar" name="cargar" method="get" replace="instance" action="/user"/>
+		<xf:bind nodeset="/account/user" readonly="true()" />
+		<forms:bind nodeset="/account/name" required="true()"/>
+		<forms:bind nodeset="/account/email" required="true()"/>
+		<forms:bind nodeset="/account/password" required="true()"/>
+		<forms:bind nodeset="/account/password" setvalue=""/>
+		<xf:send ev:event="xforms-ready" submission="cargar" />
+
+		 <xf:submission id="save" name="createfrom" method="POST" validate="true" replace="instance" action="/profile"/>
+
+	</xf:model>
+	
+</head>
+<body>
+	<fieldset>
+		<legend>Registro de usuario</legend>
+		<xf:input ref="user">
+			<xf:label>Usuario: </xf:label>
+			
+		</xf:input>
+		<br/>
+		<xf:input ref="name">
+			<xf:label>Nombre: </xf:label>
+		
+		</xf:input>
+		<br/>
+		<xf:input ref="email" >
+			<xf:label>Correo: </xf:label>
+		</xf:input>
+		<br/>
+		<xf:secret ref="password">
+			<xf:label>Contrasena: </xf:label>
+		</xf:secret>
+		<br/>
+		<xf:submit submission="save">
+			<xf:label>Guardar</xf:label>
+		</xf:submit>
+		<xf:submit submission="Delete">
+			<xf:label>Eliminar cuenta</xf:label>
+		</xf:submit>
+		<br/>
+	</fieldset>
+</body>
+</html>

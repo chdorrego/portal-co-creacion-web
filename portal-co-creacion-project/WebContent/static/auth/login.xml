@@ -1,0 +1,37 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<html
+   xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ev="http://www.w3.org/2001/xml-events"
+   xmlns:xf="http://www.w3.org/2002/xforms">
+   <head>
+      <title>Login</title>
+      <link type="text/css" rel="stylesheet" href="/static/css/authStyle.css"/>
+      <xf:model>
+         <xf:instance>
+            <account xmlns="">
+               <user/>
+               <password/>
+            </account>
+         </xf:instance>
+          <xf:submission id="login" name="loginForm" action="/login" method="post" validate="true" replace="all"/>
+		  <xf:bind ref="/login/user" required="true" />
+      </xf:model>
+   </head>
+   <body>
+      <fieldset>
+         <legend>Iniciar sesión</legend>
+         <xf:input ref="user" >
+               <xf:label>Usuario: </xf:label>
+         </xf:input>
+         <br/>
+         <xf:secret ref="password">
+            <xf:label>Constraseña: </xf:label>
+         </xf:secret>
+         <xf:submit submission="login">
+            <xf:label>Ingresar</xf:label>
+         </xf:submit>
+         <a class="button" href="registro.xml">Registrarse</a>
+         <br/>
+      </fieldset>
+   </body>
+</html>

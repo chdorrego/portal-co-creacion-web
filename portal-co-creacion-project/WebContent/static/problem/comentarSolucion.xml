@@ -1,0 +1,71 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms">
+<head>
+	<title>Comentar Solución</title>
+	<link type="text/css" rel="stylesheet" href="/static/css/styleRating.css"/>
+	<xf:model xmlns:xf="http://www.w3.org/2002/xforms">
+		<xf:instance>
+			<review xmlns="">
+		      <creation-date></creation-date>
+		      <user></user>
+		      <ranking></ranking>
+		      <comment></comment>
+		    </review>
+		</xf:instance>
+		<xf:submission id="save" name="createReview" method="post" replace="all" validate="true">
+			<xf:setvalue ev:event="xforms-submit" ref="/review/ranking" value="javascript:getRanking()"></xf:setvalue>
+			<xf:resource value="concat('/problem/',getProblem(),'/solution/',getSolution(),'/review')"></xf:resource>
+		</xf:submission>
+	</xf:model>
+	<script language="javascript" type="text/javascript">
+		<![CDATA[ 
+			function getParameterByName(name) {
+			    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			        results = regex.exec(location.search);
+			    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			};
+
+			function getProblem(){
+				return getParameterByName('problem');
+			};
+
+			function getSolution(){
+				return getParameterByName('solution');
+			};
+
+			function getRanking(){
+				return document.querySelector('input[name="rating"]:checked').value;
+
+			};
+		]]>
+	</script>
+	
+</head>
+<body>
+	<fieldset>
+		<legend>Valoración Solución</legend>
+		 <span class="starRating">
+	        <input id="rating5" type="radio" name="rating" value="5"/>
+	        <label for="rating5">5</label>
+	        <input id="rating4" type="radio" name="rating" value="4"/>
+	        <label for="rating4">4</label>
+	        <input id="rating3" type="radio" name="rating" value="3" checked="true"/>
+	        <label for="rating3">3</label>
+	        <input id="rating2" type="radio" name="rating" value="2"/>
+	        <label for="rating2">2</label>
+	        <input id="rating1" type="radio" name="rating" value="1"/>
+	        <label for="rating1">1</label>
+	     </span>
+	     <br/>
+		<xf:textarea ref="comment" >
+			<xf:label>Comentario: </xf:label>
+		</xf:textarea>
+		<br/>
+		<xf:submit submission="save">
+			<xf:label>Guardar</xf:label>
+		</xf:submit>
+		<br/>
+	</fieldset>
+</body>
+</html>

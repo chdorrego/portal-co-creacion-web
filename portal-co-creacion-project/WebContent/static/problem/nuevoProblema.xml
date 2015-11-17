@@ -1,0 +1,60 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms">
+<head>
+	<title>Nuevo Problema</title>
+	<link type="text/css" rel="stylesheet" href="/static/css/authStyle.css"/>
+	<xf:model xmlns:xf="http://www.w3.org/2002/xforms">
+		<xf:instance>
+			<problem xmlns="">
+				<creation-date></creation-date>
+				<id></id>
+				<category></category>
+				<title></title>
+				<description></description>
+				<user></user>
+			</problem>
+		</xf:instance>
+		<xf:submission id="save" name="createProblem" method="post" replace="all" validate="true" action="/problem">
+			<xf:setvalue ev:event="xforms-submit" ref="/problem/id" value="javascript:generateUUID()"></xf:setvalue>
+		</xf:submission>
+		<xf:bind ref="/register/new_user_data" nodeset="instance()//*[@required='true']" required="true()" /> 		
+	</xf:model>
+	<script language="javascript" type="text/javascript">
+		<![CDATA[ 
+			function generateUUID() {
+				var d = new Date().getTime();
+				var uuid = 'xxxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+					var r = (d + Math.random()*16)%16 | 0;
+					d = Math.floor(d/16);
+					return (c=='x' ? r : (r & 0x3|0x8)).toString(16);
+				});
+				return uuid;
+			};
+		]]>
+	</script>
+	
+</head>
+<body>
+	<fieldset>
+		<legend>Nuevo Problema</legend>
+		<xf:input ref="category" >
+			<xf:label>Categoría: </xf:label>
+			
+		</xf:input>
+		<br/>
+		<xf:input ref="title">
+			<xf:label>Título: </xf:label>
+		
+		</xf:input>
+		<br/>
+		<xf:textarea ref="description" >
+			<xf:label>Descripción: </xf:label>
+		</xf:textarea>
+		<br/>
+		<xf:submit submission="save">
+			<xf:label>Registrar</xf:label>
+		</xf:submit>
+		<br/>
+	</fieldset>
+</body>
+</html>
