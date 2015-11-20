@@ -6,6 +6,8 @@ declare %rest:path('home')
 %rest:produces("text/html")
 %output:method("html")
 %output:version("5.0")
+
+
 function page:get-home-html(){  
   let $problem-info := collection("problem")/problem
   return
@@ -15,6 +17,12 @@ function page:get-home-html(){
       <meta http-equiv="Refresh" content="url=list-problem"></meta>
       <meta http-equiv="Refresh" content="url=problem"></meta>
       <meta http-equiv="Refresh" content="url=solution"></meta>	  
+    <script type = "text/javascript" src = "/static/problem/js/funciones.js"></script> 
+    <script type = "text/javascript" src = "/static/problem/js/busqueda.js"></script>
+    <script type = "text/javascript" src = "/static/problem/js/problema.js"></script>
+	<script type="text/javascript" src="/static/problem/js/carga.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'/>
+	<link href="/static/problem/css/styles.css" rel="stylesheet" type="text/css" />
 	  <script type = "text/javascript">
 		<![CDATA[/**/		
 		function searchIt(){
@@ -42,131 +50,99 @@ function page:get-home-html(){
 			}
 		/*]]>*/
 	  </script>
-	  <style type="text/css">
-			<!--/*--><css><![CDATA[/**/	
-				table{
-					width: 100%;
-				}
-				
-				td.a1{
-					width:180px;
-					background: #1290FF;	
-					
-				}	
-				td.a2{
-					margin-left: 20px;
-				}
-				
-				button{
-					-moz-box-shadow:inset 0px 1px 0px 0px #91b8b3;
-					-webkit-box-shadow:inset 0px 1px 0px 0px #91b8b3;
-					box-shadow:inset 0px 1px 0px 0px #91b8b3;
-					background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
-					background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-					background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-					background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-					background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-					background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
-					background-color:#768d87;
-					border:1px solid #566963;
-					display:inline-block;
-					cursor:pointer;
-					color:#ffffff;
-					font-family:Arial;
-					font-size:13px;
-					font-weight:bold;
-					padding:6px 12px;
-					text-decoration:none;					
-					margin-bottom:10px;
-					width: 100px;
-				}
-
-				button:hover {
-					background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
-					background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-					background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-					background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-					background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
-					background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
-					background-color:#6c7c7c;
-				}
-
-				button:active {
-					position:relative;
-					top:1px;
-				}
-				
-				body{
-					background: #888888;					
-				}
-				
-				header{
-					background: #02DB6E;
-					
-				}
-				nav{
-					height: 350px;
-					width: 100%;				
-				}
-				
-				input[type="text"] {				  				  
-				  font-family: sans-serif;
-				  font-size: 14px;				
-				}
-				input[type="text"]:focus {
-				  outline: none;
-				}
-				
-				input[type="password"] {
-					display: block;				  
-					font-family: sans-serif;
-					font-size: 14px;
-				}
-				
-				article{
-					height: 350px;	
-					width: 100%;					
-					background: #1290FF;	
-					margin-right: 20px;
-				}
-				
-				select {
-					padding:3px;
-					margin: 0;
-					-webkit-border-radius:4px;					
-					border-radius:4px;
-					-webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;					
-					box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-					background: #f8f8f8;
-					color:#888;
-					border:none;
-					outline:none;
-					display: inline-block;
-					-webkit-appearance:none;
-					-moz-appearance:none;
-					cursor:pointer;	
-					margin-bottom:10px;
-					margin-top:10px;
-				}		
-				
-			/*]]>*/<!--/*--></css><!--*/-->
-	  </style>
+	 
     </head>
     <body>
-      <header><h1>HOME</h1>
-        <form name = "formLogin" class = "loginForm" method = "GET" action = "">
-          <div>
-            <input class = "textField" type = "text" name = "txtUser" placeholder = "Usuario"></input>
-            <input class = "textField" type = "password" name = "txtPw" placeholder = "Contraseña"></input>
-          </div>
-          <div>
-            <button  class = "btnToggle" type = "button" onclick = "">Ingresa</button>
-            <button  class = "btnToggle" type = "button" onclick = "">Registrate</button>
-          </div>
-        </form></header>
-		<table>
+	<div class="wrapper">
+    <div class="logo-menu-container">
+    <div class="logo">SOLUCIONES</div>
+    <div class="menu">
+      <ul>
+        <li><a href="#" class="active" >Inicio</a></li>
+        <li><a href="#">Problemas</a></li>
+      </ul>
+    </div>
+  </div>
+	
+	    <div class="searchform-container">
+		<div class="searchform-content">Problemas</div>
+		<div class="search">
+        <div class="search-input">
+        <input type="text" name="search" class="search-input-textfield" />
+        </div>
+        <div class="search-icon"><a href="#"><img src="/static/problem/images/search-icon.png" alt="search" /></a></div>
+		</div>
+		</div>
+		 <div class="clear"></div>
+		 
+		 
+  <div class="page">
+	 <div class="main-banner"><img src="/static/problem/images/banner.jpg" alt="banner" /></div>
+	     <div class="left-column">
+      <div class="dark-panel">
+	  
+        <div class="dark-panel-top"></div>
+        <div class="dark-panel-center">
+          <ul>
+            <li>
+              <h1>Sign In</h1>
+            </li>
+            <li>
+              <p>Si quieres comentar o publicar inicia session</p>
+            </li>
+			  <form name = "formLogin" class = "loginForm" method = "GET" action = "">
+       
+            <li class="username">
+			<input name="userid" class = "textField" type = "text" name = "txtUser" placeholder = "Usuario"></input>
+            </li>
+            <li class="password">
+			<input name="passcode" class = "textField" type = "password" name = "txtPw" placeholder = "Contraseña"></input>
+            </li>
+            <li class="button"><button  class = "btnToggle" type = "button" onclick = "">Ingresa</button>
+            <button  class = "btnToggle" type = "button" onclick = "">Registrate</button></li>
+          </ul>
+        </div>
+		 </form>
+        <div class="dark-panel-bottom"></div>
+      </div>
+      <div class="light-panel">
+        <div class="light-panel-top"></div>
+        <div class="light-panel-center">
+          <h1>Informacion</h1>
+          <ul>
+            <li><a href="https://www.google.com.co/">+ como solucionar tus problemas</a></li>
+            <li><a href="http://img.desmotivaciones.es/201103/Tetona1.jpg">+ Evitando el suicidio</a></li>
+            <li><a href="http://m.memegen.com/ltp2li.jpg">+ Como ganar la ciencia basica</a></li>
+            <li><a href="http://m.memegen.com/ltp2li.jpg">+ Soluciones</a></li>
+            <li><a href="http://m.memegen.com/ltp2li.jpg">+ Confusio</a></li>
+            <li><a href="http://m.memegen.com/ltp2li.jpg">+ Suspender la pereza</a></li>
+            <li class="no-border"><a href="http://m.memegen.com/ltp2li.jpg">+ sin...no hay paraiso</a></li>
+          </ul>
+        </div>
+        <div class="light-panel-bottom"></div>
+      </div>
+      <div class="dark-panel">
+        <div class="dark-panel-top"></div>
+        <div class="dark-panel-center">
+          <ul>
+            <li>
+              <h1>Aenean euctus</h1>
+            </li>
+            <li class="date">09-21-2015</li>
+            <li class="news">Encontrar la cura para el cancer.</li>
+            <li class="date">06-17-2015</li>
+            <li class="news">Encontrar la cura para la pereza.</li>
+            <li class="date">02-08-2015</li>
+            <li class="news-no-border">como evitar que los ñeros dominen el mundo.</li>
+          </ul>
+        </div>
+        <div class="dark-panel-bottom"></div>
+      </div>
+    </div>
+ <div class="right-column">
+ <div class="right-column-content">
+ 
+ 		<table>
 		<tr>
 		<td class= "a1">
       <nav>
@@ -208,8 +184,34 @@ function page:get-home-html(){
 	  </td>
 	  </tr>
 	  </table>
-    </body>
-  </html>
+	    </div>
+ </div><div class="footer-wrapper">
+  <div class="footer-top"></div>
+  <div class="footer-center">
+    <div class="footer-content-left">
+      <h1>Info contacto</h1>
+      <h2>Porfavor solo usar esta informacion en caso de emergencia</h2>
+      <p>nos tomamos el derecho a no contestar nunca. </p>
+      <p>si es para donaciones llame tres veces. </p>
+    </div>
+    <div class="footer-content-right">
+      <h1>Universidad de medellin</h1>
+      <h2>Topicos especiales en algoritmos</h2>
+      <p>elaborado con fines academicos</p>
+      <h3>Email: info@untitled.com</h3>
+      <h3>Phone: (800) 555-0000</h3>
+    </div>
+  </div>
+  <div class="footer-bottom"></div>
+</div>
+<div class="clear"></div>
+<div class="copyrights">Copyright (c)  <div class="copyrights-bottom"></div></div>
+ 
+
+	</div>
+	</div>
+  </body>
+</html>
 };
 
 declare %rest:path("home")
