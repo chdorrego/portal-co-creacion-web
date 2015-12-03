@@ -1,0 +1,22 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<?xsltforms-options debug="yes"?>
+<problem>
+	<creation-date>2015-12-02</creation-date>
+	<id>problem9</id>
+	<category>Foto multas</category>
+	<title>Me llegaron 2 foto multas en 1 semana</title>
+	<description>Es increible la falta de respeto para con los usuarios por parte del transito, ahora implementando foto multas a personas con el soat y la tercnomecanica vencida</description>
+	<user>marlonMoreno</user>
+</problem>
+<solution>
+	<creation-date>2015-12-02</creation-date>		
+	<title>Tener todos los papeles al día</title>
+	<description>Para evitar esto deberías tener todos tus papeles al día, y de esta manera evitas que te lleguen fotomultas por cualquier cosa</description>
+	<user>felipe</user>
+<solution>
+<solution>
+	<creation-date>2015-12-02</creation-date>		
+	<title>No des papaya!</title>
+	<description>Si te falta pocos meses para vecerte el seguro del carro, apresurate a conseguirlo, no des papaya, que en estas epocas de navidad el transito lo que busca es plata</description>
+	<user>JOrtiz</user>
+<solution>

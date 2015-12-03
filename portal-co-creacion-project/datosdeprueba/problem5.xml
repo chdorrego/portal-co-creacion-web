@@ -1,0 +1,22 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<?xsltforms-options debug="yes"?>
+<problem>
+	<creation-date>2015-12-02</creation-date>
+	<id>problem5</id>
+	<category>Ambiente</category>
+	<title>Mucho ruido en las calles</title>
+	<description>Por donde se ande hay demasiado ruido, ya no se puede estar en un lugar tranquilo sin ruido</description>
+	<user>ktalina</user>
+</problem>
+<solution>
+	<creation-date>2015-12-02</creation-date>		
+	<title>Escucha musica de tu agrado</title>
+	<description>Camina sempre con audifonos y escucha musica que sea totalmente de tu agrado, asi te evitas el ruido del exterior</description>
+	<user>Emma88</user>
+<solution>
+<solution>
+	<creation-date>2015-12-02</creation-date>		
+	<title>Evita los lugares de mucho ruido</title>
+	<description>Camina por lo lugares en los que frecuentemente no hay mucho ruido</description>
+	<user>MariaK</user>
+<solution>
