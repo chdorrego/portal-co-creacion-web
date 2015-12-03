@@ -1,0 +1,22 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<?xsltforms-options debug="yes"?>
+<problem>
+	<creation-date>2015-10-01</creation-date>
+	<id>problem4</id>
+	<category>Ambiente</category>
+	<title>No hay basureros en las calles</title>
+	<description>Ayer iba caminando con un empaqe de papitas en la mano y no encontré ni un solo basurero para depositar la basura, pienso que por culpa de esto es que las personas ignorantes tiran la basura a las calles</description>
+	<user>SantiagoRG</user>
+</problem>
+<solution>
+	<creation-date>2015-10-01</creation-date>		
+	<title>Guardala en tu bolsillo</title>
+	<description>Guarda la basura en tu bolsillo o en tu morral y cuando llegues a tu casa la depositas al basurero</description>
+	<user>stefany</user>
+<solution>
+<solution>
+	<creation-date>2015-10-31</creation-date>		
+	<title>Espera hasta encontrar un basurero</title>
+	<description>Sigue caminando hasta que encuentres algun basurero, es imposible que en 1 km no encuentres por lo menos un basurero</description>
+	<user>sky99</user>
+<solution>

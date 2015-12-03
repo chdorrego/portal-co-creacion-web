@@ -1,0 +1,22 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<?xsltforms-options debug="yes"?>
+<problem>
+	<creation-date>2015-11-15</creation-date>
+	<id>problem7</id>
+	<category>Bancos</category>
+	<title>Mucha fila para hacer una consignacion</title>
+	<description>Estuve haciendo una fila de 5 horas para poder consignar el dinero del semestre de mi hijo</description>
+	<user>RobertoCarlos</user>
+</problem>
+<solution>
+	<creation-date>2015-11-15</creation-date>		
+	<title>No vayas al banco en quincena</title>
+	<description>Te recomiendo no dejar para ir al banco en dias de quincena ya que estos dias son fatales tanto en bancos como en cajeros</description>
+	<user>Majo</user>
+<solution>
+<solution>
+	<creation-date>2015-11-16</creation-date>		
+	<title>Consignaciones a la mano</title>
+	<description>Los bancos deberia implementar sucursales pequeñas en las cuales las personas puedan hacer pequeñas transacciones</description>
+	<user>uriel</user>
+<solution>

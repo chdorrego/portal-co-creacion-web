@@ -1,0 +1,22 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<?xsltforms-options debug="yes"?>
+<problem>
+	<creation-date>2015-06-15</creation-date>
+	<id>problem6</id>
+	<category>Mascotas</category>
+	<title>Los perros se hacen popo en toda la calle</title>
+	<description>Los dueños de las mascotas parece que son bobos, dejan que sus mascotas hagan popo en cualquier lugar y no son capaz de recogerlo</description>
+	<user>rosita</user>
+</problem>
+<solution>
+	<creation-date>2015-06-16</creation-date>		
+	<title>Cobrar multas a los que no recojan el popo de sus mascotas</title>
+	<description>Deberia de existir una ley que aplique una multa a los dueños que no recojan el popo de sus mascotas</description>
+	<user>marlon6</user>
+<solution>
+<solution>
+	<creation-date>2015-06-16</creation-date>		
+	<title>Hacer pasar penas a los dueños</title>
+	<description>Si vez alguna mascota haciendo popo, gritale cosas al dueño o tomale una foto para que circule por las redes sociales</description>
+	<user>estebandido88</user>
+<solution>

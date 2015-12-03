@@ -1,0 +1,22 @@
+<?xml-stylesheet href="xsltforms/xsltforms.xsl" type="text/xsl"?>
+<?xsltforms-options debug="yes"?>
+<problem>
+	<creation-date>2015-12-02</creation-date>
+	<id>problem1</id>
+	<category>Carros</category>
+	<title>Ya no hay por donde andar en Medellin</title>
+	<description>Manejar en horas pico en la ciudad de Medellin es un completo caos</description>
+	<user>SantiagoRG</user>
+</problem>
+<solution>
+	<creation-date>2015-12-02</creation-date>		
+	<title>Viajar en trasporte publico</title>
+	<description>Las personas deberian dejar los vehiculos y las motos particulares en su casa y viajar mas en servicio publico</description>
+	<user>pedroR</user>
+<solution>
+<solution>
+	<creation-date>2015-12-02</creation-date>		
+	<title>Trasportar otras personas</title>
+	<description>Las personas deberian ponerse de acuerdo para trasportarse juntos en un mismo vehiculo y asi evitar que una persona viaje sola en un vehiculo</description>
+	<user>Juan23</user>
+<solution>
